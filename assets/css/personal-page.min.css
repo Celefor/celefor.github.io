@@ -72,7 +72,7 @@ nav {
 	top: 0;
 	left: 0;
 	background-color: rgb(0, 0, 0);
-	background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6Y?ver=db88");
+	background-image: url("https://api.dujin.org/bing/1920.php");
 	/*https://api.dujin.org/bing/1920.php*/
 	background-position: center;
 	background-size: cover;
@@ -99,7 +99,7 @@ nav {
 	display: block;
 	display: inline-block;
 	background-color: rgb(0, 0, 0);
-	background-image: url("http://q1.qlogo.cn/g?b=qq&nk=此处改为本人qq号&s=640");
+	background-image: url("http://q.qlogo.cn/headimg_dl?dst_uin=3208280010&spec=640&img_type=jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -140,12 +140,17 @@ nav {
 .connect-infor {
 	color: rgb(255, 255, 255);
 	font-size: 1.1em;
-	max-width: 28em;
+	max-width: 8em;
 	margin: 0.6em auto;
 	background: rgb(0, 0, 0);
-	opacity: 0.6;
+	opacity: 0.2;
 	text-align: center;
-	transition: all 0.1s;
+	border-radius: 2em;
+	transition: all 1s;
+}
+
+.connect-infor:hover {
+	opacity: 1;
 }
 
 .connect-infor:hover {
@@ -184,17 +189,19 @@ nav {
 	background-color: rgb(20, 20, 20);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
 	border-radius: 2em;
-	border: 2px solid rgb(120, 120, 120);
+	border: 3px solid rgb(120, 120, 120);
 }
 
 .wp {
 	background-image: url("../img/wp.png");
+	background-size: contain;
 }
 
 .qq {
 	background-image: url("../img/qq.png");
+	background-size: 90% 90%;
+	background-position: center center;
 }
 
 /* 暂时取消
