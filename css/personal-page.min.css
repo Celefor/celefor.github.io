@@ -72,7 +72,8 @@ nav {
 	top: 0;
 	left: 0;
 	background-color: rgb(0, 0, 0);
-	background-image: url("https://api.dujin.org/bing/1920.php");
+	background-image: url("https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6Y?ver=db88");
+	/*https://api.dujin.org/bing/1920.php*/
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
