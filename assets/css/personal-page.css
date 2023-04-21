@@ -39,6 +39,13 @@ nav {
 	width: 100%;
 }
 
+nav div a {
+	display: inline-block;
+	width: 1.6em;
+	height: 2em;
+	margin: 0.25em 1em;
+}
+
 .nav-left, .nav-right {
 	width: 50%;
 	height: 2.5em;
@@ -52,12 +59,21 @@ nav {
 	left: 0;
 	background: rgb(245, 104, 84);
 	box-shadow: 0px 0px 1px 1px rgb(245, 104, 84);
+	text-align: left;
+}
+
+.nav-left a {
+	background-image: url("../img/se.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .nav-right {
 	right: 0;
 	background: rgb(221, 158, 103);
 	box-shadow: 0px 0px 1px 1px rgb(231, 158, 73);
+	text-align: right;
 }
 
 .nav-left:hover, .nav-right:hover {
@@ -73,7 +89,7 @@ nav {
 	top: 0;
 	left: 0;
 	background-color: rgb(0, 0, 0);
-	background-image: url("https://api.dujin.org/bing/1920.php");
+	background-image: url("https://www.todaybing.com/api/today/cn");
 	/*https://api.dujin.org/bing/1920.php*/
 	background-position: center;
 	background-size: cover;

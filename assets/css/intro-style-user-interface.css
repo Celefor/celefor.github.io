@@ -1,0 +1,128 @@
+* {
+    border: 0px;
+    border-radius: 0px;
+    -webkit-appearance: none;
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+input {
+    outline: none;
+}
+a {
+    color: rgb(210, 100, 100);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+}
+h3 a {
+    color: rgb(255, 255, 255);
+}
+#search-box {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: SimHei, serif;
+    font-weight: 500;
+}
+#search-text, #search-action {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background: rgba(255, 255, 255, 0.8);
+    vertical-align: top;
+    height: 2.688392em;
+    font-size: 1.4em;
+}
+#search-text {
+    width: 35%;
+}
+#search-action {
+    background: center url("../img/search.png") no-repeat;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 2.688392em;
+    cursor: pointer;
+}
+#search-options {
+    color: #000000;
+    width: 4.288392em;
+    font-size: 1.4em;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#search-options span {
+    display: inline-block;
+    width: 4.288392em;
+    height: 2.688392em;
+    cursor: pointer;
+    line-height: 2.688392em;
+    transition: all 0.7s;
+}
+#search-options-available span:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+#wrap-a {
+    width: 100%;
+    overflow: hidden;
+}
+@media screen and (min-width: 200px) and (max-width: 340px) {
+    #search-text {
+        width: 44%;
+    }
+    #search-text, #search-action {
+        height: 2.36em;
+    }
+    #search-options {
+        width: 2.888392em;
+    }
+    #search-options span {
+        width: 2.888392em;
+        height: 2.36em;
+        font-size: 1em;
+        line-height: 2.36em;
+    }
+}
+@media screen and (min-width: 340px) and (max-width: 550px) {
+    #search-text {
+        width: 54%;
+    }
+    #search-text, #search-action {
+        height: 2.36em;
+    }
+    #search-options {
+        width: 3.088392em;
+    }
+    #search-options span {
+        width: 3.088392em;
+        height: 2.36em;
+        line-height: 2.36em;
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 650px) {
+    #search-text {
+        width: 55%;
+    }
+}
+@media screen and (min-width: 650px) and (max-width: 850px) {
+    #search-text {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 1080px) {
+    #search-text {
+        width: 40%;
+    }
+}

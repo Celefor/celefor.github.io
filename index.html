@@ -4,20 +4,39 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>Celefor Lee</title>
-		<link rel="stylesheet" href="./assets/css/personal-page.min.css">
+		<link rel="stylesheet" href="./assets/css/personal-page.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/intro-style-user-interface.css">
 	</head>
 	<body>
 		<!-- 页首 header -->
 		<nav>
-			<div class="nav-left"></div>
+			<div class="nav-left">
+				<a href="javascript: void(0);"></a>
+			</div>
 			<div class="nav-right"></div>
 		</nav>
 		<!-- 页体 body -->
 		<div class="background-cover">
 			<div class="index-cover" id="loading-black-cover">
-				<a href="javascript: void(0)" class="index-avatar" title="图片为QQ头像"></a>
-				<p class="index-intro">Celefor Lee</p>
-				<p class="index-yiju">古云 : <span id="jinrishici-sentence">古诗词正在加载...</span></p>
+				<form id="search-box" style="display: none;" action="https://cn.bing.com/search" method="get">
+					<div id="search-options">
+						<span data-textName="q" data-url="https://cn.bing.com/search" id="search-check" data-id="bing">必应</span>
+						<div id="search-options-available" style="display: none;">
+							<span id="bingSE" data-placeholder="true" data-textName="q" data-url="https://cn.bing.com/search" data-id="bing">必应</span>
+							<span id="baiduSE" data-placeholder="true" data-textName="wd" data-url="https://www.baidu.com/s" data-id="baidu">百度</span>
+							<span id="googleSE" data-placeholder="true" data-textName="q" data-url="https://www.google.com.hk/search" data-id="google">谷歌</span>
+						</div>
+					</div><!--
+						消除input间的间距
+					--><input id="search-text" type="text" autocomplete="off" name="q" /><!--
+						消除input间的间距
+					--><input id="search-action" type="submit" name="go" value />
+				</form>
+				<div id="index-introduction">
+					<a href="javascript: void(0)" class="index-avatar" title="图片为QQ头像"></a>
+					<p class="index-intro">Celefor Lee</p>
+					<p class="index-yiju">古云 : <span id="jinrishici-sentence">古诗词正在加载...</span></p>
+				</div>
 			</div>
 		</div>
 		<!-- 页脚 footer -->
@@ -35,6 +54,29 @@
 	</body>
 	<!-- 今日诗词 API 接口 www.jinrishici.com -->
 	<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-	<!-- 事件处理程序 -->
-	<script src="./assets/js/observer.min.js" charset="utf-8"></script>
+
+	<!--按照优先级加载搜索js文件-->
+
+	<script charset="utf-8" src="./assets/js/intro-functions.js"></script>
+	<!--主函数库文件-->
+
+	<script charset="utf-8" src="./assets/js/intro-functions-events.js"></script>
+	<!--事件函数库文件-->
+
+	<script charset="utf-8" src="./assets/js/intro-functions-cookies.js"></script>
+	<!--Cookies函数库文件-->
+
+	<!--主页事件处理程序 -->
+	<script src="./assets/js/index-observer.js" charset="utf-8"></script>
+
+	<script charset="utf-8" src="./assets/js/intro-functions-command.js"></script>
+	<!--有关功能实现文件-->
+
+	<script charset="utf-8" src="./assets/js/intro-functions-events-command.js"></script>
+	<!--事件监听实现文件-->
+
+	<script type="text/javascript">
+		//搜索页面程序版本号
+		console.log("%c Version: beta 2019-03/2.11 ", "border-radius: 16px; background: #000000; color: #FFFFFF; padding: 4px 8px 4px 8px;");
+	</script>
 </html>
