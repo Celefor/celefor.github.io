@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>xx - 个人主页</title>
+		<link rel="stylesheet" href="./css/personal-page.min.css">
+	</head>
+	<body>
+		<!-- 页首 header -->
+		<nav>
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</nav>
+		<!-- 页体 body -->
+		<div class="background-cover">
+			<div class="index-cover" id="loading-black-cover">
+				<a href="javascript: void(0)" class="index-avatar" title="图片为QQ头像"></a>
+				<p class="index-intro">本名xx，xx，xxxxx。</p>
+				<p class="index-yiju">古云 : <span id="jinrishici-sentence">古诗词正在加载...</span></p>
+			</div>
+		</div>
+		<!-- 页脚 footer -->
+		<div class="connect-cover">
+			<div class="connect-infor">
+				<p id="wordpress"><a href="./index.php">点击访问我的Blog</a></p>
+				<p id="qq">我的QQ账号 : xxxxxxxxx</p>
+				<!--<p id="wechat">我的微信账号 : </p>-->
+			</div>
+			<div class="connect-way">
+				<a href="javascript: void(0)"><span title="WordPress博客" class="wp"></span></a>
+				<a href="javascript: void(0)"><span title="腾讯QQ" class="qq"></span></a>
+			</div>
+		</div>
+	</body>
+	<!-- 今日诗词 API 接口 www.jinrishici.com -->
+	<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+	<!-- 事件处理程序 -->
+	<script src="./js/observer.min.js" charset="utf-8"></script>
+</html>

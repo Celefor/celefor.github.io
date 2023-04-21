@@ -1,0 +1,215 @@
+/*
+**************************************************************
+* Author: Celefor lee
+* Date: 03/08/19
+* Description: The style is the leader of the personal page,
+*              A Github Opensource Project.
+* Alert: The style can't be well applied colours to a drawing
+*		 under the environment of IE8 or under it.
+**************************************************************
+*/
+
+/*思源宋体*/
+@font-face {
+	font-family: SourceHanSerifCN;
+	src: url("../font/SourceHanSerifCN.eot"),
+		 url("../font/SourceHanSerifCN.otf"),
+		 url("../font/SourceHanSerifCN.woff");
+}
+
+/* 站酷意大利文
+@font-face {
+	font-family: ZCOOLEnglish;
+	src: url("../font/ZCOOLAddictItalic.ttf"),
+		 url("../font/ZCOOLAddictItalic.eot"),
+		 url("../font/ZCOOLAddictItalic.otf"),
+		 url("../font/ZCOOLAddictItalic.woff");
+}
+*/
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+nav {
+	width: 100%;
+}
+
+.nav-left, .nav-right {
+	width: 50%;
+	height: 2.5em;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	transition: all 1s;
+}
+
+.nav-left {
+	left: 0;
+	background: rgb(245, 104, 84);
+	box-shadow: 0px 0px 1px 1px rgb(245, 104, 84);
+}
+
+.nav-right {
+	right: 0;
+	background: rgb(221, 158, 103);
+	box-shadow: 0px 0px 1px 1px rgb(231, 158, 73);
+}
+
+.nav-left:hover, .nav-right:hover {
+	z-index: 9999;
+	width: 100%;
+}
+
+.background-cover {
+	width: 100%;
+	height: 100%;
+	display: table;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0);
+	background-image: url("https://api.dujin.org/bing/1920.php");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 10;
+}
+
+.index-cover {
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 100%;
+	padding-bottom: 10%;
+	background-color: rgb(0, 0, 0);
+	display: table-cell;
+	vertical-align: middle;
+	font-family: SourceHanSerifCN;
+	font-weight: bold;
+	text-align: center;
+}
+
+.index-avatar {
+	width: 6em;
+	height: 6em;
+	display: block;
+	display: inline-block;
+	background-color: rgb(0, 0, 0);
+	background-image: url("http://q1.qlogo.cn/g?b=qq&nk=此处改为本人qq号&s=640");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 6px solid rgb(245, 245, 245);
+	border-radius: 6em;
+	transition: all 0.8s;
+}
+
+.index-avatar:hover {
+	transform: rotate(360deg);
+}
+
+.index-intro {
+	margin-top: 0.2em;
+	padding-top: 0;
+	margin-bottom: 0.05em;
+	padding-bottom: 0;
+	font-size: 2.2em;
+	font-weight: 500;
+	font-family: SourceHanSerifCN;
+}
+
+.index-yiju {
+	margin-top: 0.05em;
+	padding-top: 0;
+	font-size: 1.6em;
+	font-weight: 500;
+	font-family: SourceHanSerifCN;
+}
+
+.connect-cover {
+	width: 100%;
+	position: absolute;
+	bottom: 5%;
+	z-index: 9999;
+}
+
+.connect-infor {
+	color: rgb(255, 255, 255);
+	font-size: 1.1em;
+	max-width: 28em;
+	margin: 0.6em auto;
+	background: rgb(0, 0, 0);
+	opacity: 0.6;
+	text-align: center;
+	transition: all 0.1s;
+}
+
+.connect-infor:hover {
+	background: rgb(30, 30, 30);
+}
+
+.connect-infor p {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+#qq, #wechat {
+	width: 100%;
+	padding: 0.6em 0;
+}
+
+.connect-infor p a:link, .connect-infor p a:visited {
+	color: rgb(255, 255, 255);
+	width: 100%;
+	text-decoration: none;
+	display: block;
+	padding: 0.6em 0;
+}
+
+.connect-way {
+	max-width: 100%;;
+	text-align: center;
+}
+
+.connect-way span {
+	width: 2em;
+	height: 2em;
+	margin: 0 2.2%;
+	display: inline-block;
+	background-color: rgb(20, 20, 20);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border-radius: 2em;
+	border: 2px solid rgb(120, 120, 120);
+}
+
+.wp {
+	background-image: url("../img/wp.png");
+}
+
+.qq {
+	background-image: url("../img/qq.png");
+}
+
+/* 暂时取消
+.wx {
+	background-image: url("../img/wx.png");
+}
+*/
+
+@media screen and (max-width: 635px) {
+	.index-intro {
+		font-size: 1.9em;
+	}
+	.index-yiju {
+		font-size: 1.2em;
+	}
+	.connect-way span {
+		margin: 0 3.5%;
+	}
+}
