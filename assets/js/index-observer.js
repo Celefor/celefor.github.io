@@ -16,12 +16,12 @@ doc.IndexPageControl = function (decrease, increase){
 	//转换主页
 	if (increase == "#search-box"){
 		var millisecond = new Date().getTime();
-		var expiresTime = new Date(millisecond + 60 * 1000 * 15);
+		var expiresTime = new Date(millisecond + 3600 * 1000 * 24 * 30);
 		doc.CookieUtil.set("se_clicked", "true", expiresTime);
 		//设置COOKIE
 	} else {
 		var millisecond = new Date().getTime();
-		var expiresTime = new Date(millisecond + 60 * 1000 * 15);
+		var expiresTime = new Date(millisecond + 3600 * 1000 * 24 * 30);
 		doc.CookieUtil.set("se_clicked", "false", expiresTime);
 	}
 }

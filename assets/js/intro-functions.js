@@ -99,7 +99,7 @@ doc.introEffect = {
     closeIt: null,
     isOpening: null,
     isClosing: null,
-    bigSpanNum: 2.6883928571428575,
+    bigSpanNum: 2.688392,
     smallSpanNum: 2.36,
     box: document.getElementById("search-options-available"),
     wholeBox: document.getElementById("search-options"),
@@ -196,18 +196,6 @@ doc.introEffect = {
                 setTimeout(arguments.callee, 10);
             }
         }, 10);
-    },
-    rotate: function (elem, maxDeg){
-        var num = 2, i = 1, startNum = Number(elem.style["transform"].split("rotate(")[1].split("deg)")[0]);
-        setTimeout(function (){
-            if (Number(elem.style["transform"].split("rotate(")[1].split("deg)")[0]) >= maxDeg){
-                elem.style["transform"] = "rotate(" + maxDeg + "deg)";
-                return false;
-            }
-            elem.style["transform"] = "rotate(" + (startNum + num + i * 1.5) + "deg)";
-            i = i + 8;
-            setTimeout(arguments.callee, 10);
-        }, 10)
     }
 };
 doc.introCookie = {

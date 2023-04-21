@@ -8,9 +8,6 @@ doc.addLoadEvent(doc.loaded);
 //doc.addLoadEvent();
 
 (function (){
-    document.body.style.height = (window.innerHeight || document.documentElement.clientHeihgt) + "px";
-    //将body高度固定化
-
     var pageHeight = doc.pageHeight();
         that = document.getElementById("search-box"),
         num1 = (that.offsetHeight)? (pageHeight/2) - (that.offsetHeight/2): pageHeight/2 - 20,
