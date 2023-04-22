@@ -26,7 +26,7 @@ doc.IndexPageControl = function (decrease, increase){
 	}
 }
 
-window.onload = function(){
+doc.introEffect.chBgOpct = function (){
 	var num = 1,
 		str = "rgba(0, 0, 0, ",
 		elem = document.getElementById("loading-black-cover"),
@@ -36,6 +36,10 @@ window.onload = function(){
 			num -= 0.065;
 			setTimeout(arguments.callee, 100);
 		}, 1);
+}
+
+window.onload = function(){
+	doc.introEffect.chBgOpct();
 	if (doc.CookieUtil.get("se_clicked") == "true") {
 		doc.IndexPageControl("#index-introduction", "#search-box");
 	}
@@ -62,5 +66,6 @@ document.querySelector(".qq").onclick = function(){
 doc.EventUtil.addHandler(document.querySelector(".nav-left a"), "click", function (){
 	if (Math.random() < 0.5) doc.IndexPageControl("#index-introduction", "#search-box");
 	else doc.IndexPageControl("#search-box", "#index-introduction");
+	doc.introEffect.chBgOpct();
 });
 
