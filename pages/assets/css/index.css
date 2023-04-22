@@ -1,0 +1,49 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+header {
+    display: table;
+    margin: 2.5em 4%;
+    height: 64px;
+    width: 92%;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header-title {
+    display: table-cell;
+    width: 40%;
+    height: 64px;
+    font-size: 1.5em;
+    line-height: 64px;
+}
+nav {
+    display: table-cell;
+    text-align: right;
+}
+nav a {
+    display: inline-block;
+    height: 100%;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+    line-height: 64px;
+}
+nav a span {
+    display: inline-block;
+    height: 100%;
+}
+
+#pages {
+    width: 90%;
+    padding: 0 5%;
+}
+
+footer {
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: right;
+    padding: 0 5%;
+}
