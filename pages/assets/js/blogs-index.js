@@ -22,7 +22,7 @@ var Ctors = {
         };
     },
     buildCatalog: function (data, type){
-        for (var i = (Ctors.index == null) ? (Ctors.index = data.length) - 1 : Ctors.index; i >= 0; i--) {
+        for (var i = (Ctors.index == null) ? (Ctors.index = data.url.length) - 1 : Ctors.index; i >= 0; i--) {
             if (Ctors.index - i >= Ctors.max) break;
             document.querySelector("#pages").innerHTML += "<h2><a href='/pages/blogs/" + data.url[i] + ".html'>" + data.title[i] + "</a></h2>";
             document.querySelector("#pages").innerHTML += "<p>" + data.date[i] + "&nbsp;&nbsp;&nbsp;&nbsp;" + data.keywords[i] + "</p>";
