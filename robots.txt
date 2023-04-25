@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Allow: /pages/
 Allow: /pages/blogs/
+Disallow: /pages/parts/
