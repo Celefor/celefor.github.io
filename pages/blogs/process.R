@@ -2,7 +2,6 @@ library(jsonlite)
 library(rematch)
 library(magrittr)
 library(rvest)
-library(xml2)
 # 加载必要包
 
 cpath <- "D:\\Projects\\Web\\GithubPages\\celefor\\pages\\blogs\\"
@@ -50,7 +49,7 @@ if (length(all_url) == length(se_files)) {
     temp <- json
     length(json) <- 0
     json$title <- c(temp$title, c_title)
-    json$url <- c(temp$url, c_url)
+    json$url <- c(temp$url, cse_file)
     json$date <- c(temp$date, c_date)
     json$keywords <- c(temp$keywords, c_keywords)
     # JSON追加数据
@@ -58,9 +57,9 @@ if (length(all_url) == length(se_files)) {
     c_text <- readLines(c_absolute_url, encoding = "UTF-8")
     header[4] <- paste(c("<title>", c_title, "</title>"), sep = "", collapse = "")
     header[5] <- paste(c("<meta name='Keywords' content='", c_keywords, "'>"), sep = "", collapse = "")
-    paste(c(header, c_text, footer), sep = "", collapse = "") %>% writeLines(con = c_absolute_url)
+    writeLines(c(header, c_text, footer), con = c_absolute_url, sep = "\n")
     # 根据当前参数调整header文档  合并  写入
     
-    toJSON(json) %>% cat(file = paste(c(cpath, "data.json"), sep = "", collapse = ""), fill = FALSE, labels = NULL, append = FALSE)
-  }
+    writeLines(toJSON(json, pretty = TRUE), con = paste(c(cpath, "data.json"), sep = "", collapse = ""), sep = "\n")
+    }
 }

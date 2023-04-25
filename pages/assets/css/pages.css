@@ -1,0 +1,11 @@
+body {
+    padding: 6% 8%;
+    background-color: blanchedalmond;
+    word-break: break-all;
+}
+#back-index {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    background-color: blanchedalmond;
+}
