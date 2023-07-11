@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>Nodejs Summary</title>
+<meta name='Keywords' content='Nodejs, Web'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+    <a id="back-index" href="../index.html">Back to Index</a>
+<keywords data="Nodejs, Web"></keywords>
+<h1>Nodejs Summary</h1>
+首先新建node_global和node_cache两个文件夹，然后
+npm config set prefix "D:\DevKits\nodejs\node_global"
+npm config set cache "D:\DevKits\nodejs\node_cache"
+npm config set registry 镜像源
+
+配置还涉及两个path用户环境变量：
+D:\DevKits\nodejs\node_global
+D:\DevKits\nodejs\node_global\node_modules\yarn\bin
+和一个NODE_PATH系统环境变量：
+D:\DevKits\nodejs\node_global\node_modules
+
+另外还有一个在github上发现的为解决证书问题（https://github.com/electron/electron/issues/26910）
+而加入的ELECTRON_MIRROR系统变量，这个变量有时有问题，不正确时会导致checksum不对应。
+https://npmmirror.com/mirrors/electron/
+
+npm install有-g全局安装（环境变量地址）和本地安装（默认）两种情况；
+yarn是一个辅助npm包控制工具；nrm是npm镜像管理工具；cnpm是阿里巴巴替换了镜像做了修改的npm衍生品。
+
+<h1>Electron</h1>
+electron-packager . appname --platform=linux --arch=arm64 --out=./release-builds --overwrite
+
+electron-builder工具由于需要从GitHub下载组件，所以一直不能用。故用的是electron-packager工具。
+
+<h1>Marks</h1>
+2023/07/11
+electron安装vue时遇到错误：
+@achrinza/node-ipc@9.2.2: The engine "node" is incompatible with this module. Expected version "8 || 10 || 12 || 14 || 16 || 17". Got "18.16.0"
+执行yarn config set ignore-engines true兼容以后遇到的错误，以后遇到问题时可以试试撤回这个操作。
+        <script src="../assets/js/blogs-pages.js"></script>        
+    </body>
+</html>
